@@ -41,11 +41,11 @@ class _SearchViewState extends State<SearchView> with BaseState {
   Widget _createSearchListView(BuildContext context, SearchComplete searchComplete) {
     final items = searchComplete.model?.data ?? [];
     return CustomScrollView(
-      slivers: [_sliverAppBar(context, items), _sliverList(items)],
+      slivers: [_sliverAppBar(context), _sliverList(items)],
     );
   }
 
-  SliverAppBar _sliverAppBar(BuildContext context, List<Data> items) {
+  SliverAppBar _sliverAppBar(BuildContext context) {
     return SliverAppBar(
       backgroundColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
