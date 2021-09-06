@@ -4,14 +4,9 @@ import 'package:advanced_search_flutter/search/model/user_model.dart';
 
 class MultiThreadUtility {
   static SearchModel? findItemsModelParents(SearchModel model) {
-    final _searchItem = model;
-    if (_searchItem is SearchModel) {
-      final _findValues = _searchItem.items.where((element) => element.isValueContains(_searchItem.key)).toList();
-      _searchItem.items = _findValues;
-      return _searchItem;
-    }
-
-    return null;
+    final _findValues = model.items.where((element) => element.isValueContains(model.key)).toList();
+    model.items = _findValues;
+    return model;
   }
 }
 

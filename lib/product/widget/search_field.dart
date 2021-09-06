@@ -14,6 +14,7 @@ class SearchField extends StatefulWidget {
 class _SearchFieldState extends State<SearchField> {
   late CancelableOperation<void> cancellableOperation;
   final _delayTime = Duration(milliseconds: 300);
+
   @override
   void initState() {
     super.initState();
